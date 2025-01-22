@@ -212,3 +212,32 @@ To ensure your local repository stays up-to-date with the latest changes in the 
 ---
 
 By adding these steps and clarifying the relationship between the original and cloned repositories, your team will better understand the process. Let me know if further adjustments are needed!
+----- 
+
+## Install Poetry using the developer guide- 
+https://stackoverflow.com/questions/70064449/how-to-force-reinstall-poetry-environment-from-scratch
+Observation: We need to check which version of python is running in our system if it is python 3.9
+then go to add/remove programs in control panel search for python delete all python versions and install the required one in this case python 3.10 was installed in the pc after removing 3.9.
+1. To check the python version
+```bash
+python --version
+```
+2. To install the required python version go the official python website and download the python version required make sure to check the python version by typing the above command as the virtual env created in poetry will be equal to the system python version.
+3. Install Poetry by using the below command install pipx if not present in the system.
+```bash 
+pipx install poetry(force install again)
+```
+4. Check poetry is accurately installed using the command below
+```bash
+poetry --version
+```
+To check the base python and virtualenv version
+poetry env info
+To create virtual environment
+poetry shell
+To install packages
+poetry install --no-root
+poetry update
+poetry
+- Install the required packages using poetry install
+- Run the crew using poetry run main.py
