@@ -212,12 +212,19 @@ To ensure your local repository stays up-to-date with the latest changes in the 
 ---
 
 By adding these steps and clarifying the relationship between the original and cloned repositories, your team will better understand the process. Let me know if further adjustments are needed!
------ 
+ 
 
-## Install Poetry using the developer guide- 
-https://stackoverflow.com/questions/70064449/how-to-force-reinstall-poetry-environment-from-scratch
-Observation: We need to check which version of python is running in our system if it is python 3.9
+## Install Poetry using the developer guide-
+Reference Links:
+poetry: https://python-poetry.org/docs/pyproject/ 
+reinstall poetry if error faced: https://stackoverflow.com/questions/70064449/how-to-force-reinstall-poetry-environment-from-scratch
+
+**Observation:** We need to check which version of python is running in our system if it is python 3.9
 then go to add/remove programs in control panel search for python delete all python versions and install the required one in this case python 3.10 was installed in the pc after removing 3.9.
+**Solution:** Install python 3.10 and then install poetry using the developer guide.
+**enviroment creation**: There is less flexibility in creating python environment in poetry however there is a higher flexibility if anaconda is used to create environment. eg: conda create -p myenv python==3.10 but the project in this case has to be set up with requirements.txt and setup.py for requirements and package management where the same thing can be avoided in poetry.
+
+
 1. To check the python version
 ```bash
 python --version
@@ -241,8 +248,14 @@ poetry shell
 ```bash
  poetry install --no-root
  ```
+8. To add dependencies in poetry 
+```bash
+poetry add phidata
+```  
 9. Update the python packages
+```bash
 poetry update
+```
 
 - Install the required packages using poetry install
 - Run the crew using poetry run main.py
