@@ -231,13 +231,18 @@ pipx install poetry(force install again)
 ```bash
 poetry --version
 ```
-To check the base python and virtualenv version
+5. To check the base python and virtualenv version
 poetry env info
-To create virtual environment
+6. To create virtual environment
+```bash
 poetry shell
-To install packages
-poetry install --no-root
+```
+7. To install packages
+```bash
+ poetry install --no-root
+ ```
+9. Update the python packages
 poetry update
-poetry
+
 - Install the required packages using poetry install
 - Run the crew using poetry run main.py
