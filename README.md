@@ -256,6 +256,13 @@ poetry add phidata
 ```bash
 poetry update
 ```
-
+10. Run Your Python File: Once the virtual environment is activated, you can run your Python file using the python command:
+```bash
+python your_file.py
+```
+11. Alternatively, if you prefer not to activate the virtual environment, you can run the Python file directly using Poetry's run command:
+```bash
+poetry run python your_script.py
+```
 - Install the required packages using poetry install
 - Run the crew using poetry run main.py
