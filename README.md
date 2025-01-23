@@ -1,3 +1,98 @@
+
+# Comprehensive Stock Analysis and News Platform
+
+## Project Overview
+This project aims to provide a versatile and comprehensive platform for investors, analysts, and anyone interested in understanding the performance and outlook of publicly traded companies across various global markets. Unlike the initial focus on NVIDIA Corporation (NVDA), the project has now been expanded to cover a wider range of markets, including the United States, Europe, China, Germany, France, and India.
+
+The key objective of this platform is to empower users with the necessary tools and insights to make informed investment decisions. By offering a seamless experience for exploring and analyzing stocks, the project caters to a diverse audience seeking to gain a deeper understanding of the financial markets and the companies that shape them.
+
+## Key Features
+
+1. **Market and Stock Selection**:
+   Users will be able to select the country they are interested in from a dropdown menu. Based on the chosen country, the tool will present a list of available major stock markets. Once a market is selected, users can then choose the specific stock they wish to analyze.
+
+2. **Analyst Recommendations**:
+   For the selected stock, the tool will retrieve and display the latest analyst recommendations, including the breakdown of "Strong Buy", "Buy", "Hold", "Sell", and "Strong Sell" ratings over different time periods. This provides valuable insight into the current market sentiment surrounding the stock.
+
+3. **Competitor Analysis**:
+   In addition to the target stock, the tool will also provide information on the stock's key competitors within the same market. This allows users to compare the performance and analyst sentiments across similar companies, offering a more comprehensive view of the stock's positioning and potential.
+
+4. **Latest News**:
+   The platform will gather and present the most recent news articles and events related to the selected stock and its competitors. By staying informed about the latest developments, users can better anticipate how these factors may impact the stocks they are interested in.
+
+5. **Financial Data Analysis**:
+   The tool will offer in-depth analysis of the selected stock's financial performance, including metrics such as revenue, cost, profit margin trends, and other relevant financial data. Intuitive data visualizations, such as charts and graphs, will be used to help users better understand the stock's financial health and outlook.
+
+6. **Streamlit-based Interface**:
+   The platform will be accessible through a user-friendly Streamlit web application, providing a seamless and interactive experience for exploring the stock analysis features. This ensures the tool is accessible and easy to use for both novice and experienced users.
+
+## Installation and Setup
+
+To set up the project, please follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/philtaboada/Challenge-with-EXPLOR.git
+   ```
+
+2. **Install Python and Poetry**:
+   Ensure that you have Python 3.10 installed on your system. Then, install Poetry, a dependency management tool for Python, by following the [official Poetry installation guide](https://python-poetry.org/docs/master/#installation).
+
+3. **Create a Virtual Environment**:
+   ```bash
+   cd Challenge-with-EXPLOR
+   poetry install
+   ```
+   This will create a new virtual environment and install the project's dependencies.
+
+4. **Set up Environment Variables**:
+   The project uses environment variables to store sensitive information, such as API keys. Create a `.env` file in the project root directory and add the required variables.
+
+5. **Run the Application**:
+   ```bash
+   poetry run streamlit run app.py
+   ```
+   This will launch the Streamlit-based web application in your default web browser.
+
+## Technical Details
+
+The project leverages the following key technologies and libraries:
+
+- **Python**: The primary programming language used for the project.
+- **Streamlit**: A Python library for building interactive web applications.
+- **Groq**: A deep learning-based language model used for various tasks, such as web scraping and data processing.
+- **OpenAIChat**: An alternative language model that can be used in place of Groq.
+- **DuckDuckGo**: A web search tool used to gather the latest news and information.
+- **YFinanceTools**: A library for retrieving financial data, including stock prices, analyst recommendations, and company information.
+
+The project follows a modular architecture, with separate components for web agents, finance agents, and an overall agent team. This design allows for easy extensibility and the incorporation of additional features or data sources in the future.
+
+## Contributing
+
+If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your branch to your forked repository.
+5. Submit a pull request to the original repository, explaining the changes you've made.
+
+Please ensure that your contributions adhere to the project's coding standards and guidelines.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+We would like to acknowledge the following resources and individuals that have contributed to the development of this project:
+
+- The [Anthropic](https://www.anthropic.com/) team for creating the powerful language models and tools used in this project.
+- The open-source community for developing the libraries and frameworks utilized in this project, such as Streamlit, Groq, and YFinanceTools.
+- [Phil Taboada](https://github.com/philtaboada) for providing the initial project structure and guidance.
+
+If you have any questions or feedback, please don't hesitate to reach out. We're excited to collaborate and improve this project further.
+
 ---
 # Developing Guidelines with Branch
 A comprehensive guide for team members to collaborate on this project.
