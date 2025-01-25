@@ -18,6 +18,7 @@ openai = "^1.60.0"
 groq = "^0.15.0"
 duckduckgo-search = "^7.2.1"
 yfinance = "^0.2.52"
+streamlit = "^1.41.1"
 
 
 [tool.pyright]
