@@ -32,16 +32,16 @@ To set up the project, please follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/philtaboada/Challenge-with-EXPLOR.git
+   git clone https://github.com/ivesh/Finance_Investment_Agent.git
    ```
 
 2. **Install Python and Poetry**:
    Ensure that you have Python 3.10 installed on your system. Then, install Poetry, a dependency management tool for Python, by following the [official Poetry installation guide](https://python-poetry.org/docs/master/#installation).
 
-3. **Create a Virtual Environment**:
+3. **Create a Virtual Environment from vs code from the project folder**:
    ```bash
-   cd Challenge-with-EXPLOR
-   poetry install
+   cd Finance_Investment
+   poetry shell
    ```
    This will create a new virtual environment and install the project's dependencies.
 
@@ -85,9 +85,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-We would like to acknowledge the following resources and individuals that have contributed to the development of this project:
+I would like to acknowledge the following resources that has contributed to the development of this project:
 
-- The [Anthropic](https://www.anthropic.com/) team for creating the powerful language models and tools used in this project.
+- The [Anthropic](https://www.anthropic.com/) ,[OpenAI](),[Google],[Meta],[Microsoft] team for creating the powerful language models and tools used in this project.
 - The open-source community for developing the libraries and frameworks utilized in this project, such as Streamlit, Groq, and YFinanceTools.
 - [Phil Taboada](https://github.com/philtaboada) for providing the initial project structure and guidance.
 
@@ -104,7 +104,7 @@ A comprehensive guide for team members to collaborate on this project.
 ### What Is the Original Repository?
 The **original repository** is the main project repository hosted on GitHub, owned by the project maintainer or organization. In this guide, the original repository is:
 ```
-https://github.com/philtaboada/Challenge-with-EXPLOR
+https://github.com/ivesh/Finance_Investment_Agent
 ```
 This is the **source of truth** where all approved changes will eventually be merged.
 
@@ -139,12 +139,12 @@ A **cloned repository** is a local copy of the original repository on your compu
 1. **Open a folder** of your choice and name it `project`.
 2. Clone the original repository to your local machine:
    ```bash
-   git clone https://github.com/philtaboada/Challenge-with-EXPLOR
+   git clone https://github.com/ivesh/Finance_Investment_Agent
    ```
 
 3. Navigate into the cloned directory:
    ```bash
-   cd Challenge-with-EXPLOR
+   cd Finance_Investment
    ```
 
 4. **Verify your Git setup**:
@@ -153,8 +153,8 @@ A **cloned repository** is a local copy of the original repository on your compu
    ```
    Expected Output:
    ```
-   origin  https://github.com/philtaboada/Challenge-with-EXPLOR.git (fetch)
-   origin  https://github.com/philtaboada/Challenge-with-EXPLOR.git (push)
+   origin  https://github.com/ivesh/Finance_Investment_Agent.git (fetch)
+   origin  https://github.com/ivesh/Finance_Investment_Agent.git (push)
    ```
    This confirms your cloned repository is connected to the original repository.
 
@@ -188,12 +188,12 @@ A **cloned repository** is a local copy of the original repository on your compu
 
 3. Re-clone the repository:
    ```bash
-   git clone https://github.com/philtaboada/Challenge-with-EXPLOR
+   git clone https://github.com/ivesh/Finance_Investment_Agent
    ```
 
 4. Navigate into the cloned directory:
    ```bash
-   cd Challenge-with-EXPLOR
+   cd Finance_Investment
    ```
 
 5. Confirm the repository is set up correctly:
