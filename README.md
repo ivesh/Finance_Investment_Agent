@@ -276,7 +276,7 @@ To ensure your local repository stays up-to-date with the latest changes in the 
 
 1. Add the original repository as an **upstream remote**:
    ```bash
-   git remote add upstream https://github.com/philtaboada/Challenge-with-EXPLOR
+   git remote add upstream https://github.com/ivesh/Finance_Investment_Agent
    ```
 
 2. Fetch the latest changes from the original repository:
