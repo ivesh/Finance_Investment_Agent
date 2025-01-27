@@ -36,7 +36,7 @@ To set up the project, please follow these steps:
    ```
 
 2. **Install Python and Poetry**:
-   Ensure that you have Python 3.10 installed on your system. Then, install Poetry, a dependency management tool for Python, by following the [official Poetry installation guide](https://python-poetry.org/docs/master/#installation).
+   Ensure that you have Python 3.10 installed on your system. Then, install Poetry, a dependency management tool for Python, by following the [official Poetry installation guide](https://python-poetry.org/docs/).
 
 3. **Create a Virtual Environment from vs code from the project folder**:
    ```bash
