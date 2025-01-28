@@ -373,8 +373,72 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 
-## Screenshots
+## Screenshots of Streamlit app usage and project structure.
 
-![App Screenshot]
+---------------------------------------------
+- **Loading Environment**  
+  - `load_dotenv()` is called to load environment variables (e.g., any API keys). This ensures that any credentials or configuration variables are available to the agents at runtime.
+
+- **Defining the Web Agent**  
+  1. **Provider/Model**: Uses `Groq(id="llama-3.3-70b-versatile")` as its underlying language model.  
+  2. **Identifier**: Named `"Web Agent"` and assigned a unique `agent_id="web-agent"` and `session_id="session_web"`.  
+  3. **Behavioral Settings**:  
+     - `add_chat_history_to_messages=True` so previous conversation context is included.  
+     - `show_tool_calls=True` so any sub-tool usage is shown in the output.  
+     - `markdown=True` for formatted text (tables, bullet points, etc.).  
+     - `debug_mode=False` to suppress low-level debug logs.  
+  4. **Instructions**: `["Always include sources"]` guides how this agent should format answers (it must cite sources).  
+  5. **Tools**: `[DuckDuckGo()]` for web searches/news retrieval. The agent can call this tool to find online information.
+
+- **Defining the Finance Agent**  
+  1. **Provider/Model**: Also uses `Groq(id="llama-3.3-70b-versatile")`.  
+  2. **Identifier**: Named `"Finance Agent"`, with `agent_id="finance-agent"` and `session_id="session_finance"`.  
+  3. **Behavioral Settings**:  
+     - `add_chat_history_to_messages=True` for context.  
+     - `show_tool_calls=True` and `markdown=True`.  
+     - `debug_mode=False` to keep logs less verbose.  
+  4. **Instructions**:  
+     - `"Get financial data"`,  
+     - `"Use tables to display data"`.  
+    This tells the agent to fetch and present financial data in a tabular format.
+  5. **Tools**: `[YFinanceTools(...)]` for stock data, analyst recommendations, company info, and historical prices. This agent can call those YFinance utilities to get real-time or historical financial data.
+
+- **Creating the Team Agent**  
+  1. **Provider/Model**: `Groq(id="llama-3.3-70b-versatile")` once again.  
+  2. **Identifier**: Named `"Agent Team"`, with `agent_id="agent-team"` and `session_id="session_team"`.  
+  3. **Behavioral Settings**:  
+     - `add_chat_history_to_messages=True`,  
+     - `show_tool_calls=True` (so the final output shows when tasks are transferred to sub-agents),  
+     - `markdown=True` for rich formatting,  
+     - `debug_mode=False` to limit logs.  
+  4. **Instructions**:  
+     - `"Always include sources"`,  
+     - `"Use tables to display data"`.  
+    These instructions apply on top of the sub‐agents’ instructions and shape the final combined response.
+  5. **Team**: `[web_agent, finance_agent]`. The team agent can delegate tasks to either sub‐agent (Web Agent or Finance Agent), depending on what’s needed—like fetching news from DuckDuckGo or financial data from YFinance.
+
+- **Running the Code**  
+  1. The `if __name__ == "__main__": ...` block calls `agent_team.print_response(...)` with the prompt:  
+     > "Summarize analyst recommendations and share the latest news for NVDA"  
+  2. **Orchestration**:  
+     - The “Team” agent receives the prompt.  
+     - It dispatches relevant sub-requests:  
+       - **Web Agent** to retrieve and summarize recent NVDA news.  
+       - **Finance Agent** to get analyst recommendations, stock history, or other financial metrics.  
+     - It merges and formats the results (including sources, tables, etc.) following the instructions.  
+  3. **Streaming Output**: `stream=True` prints the response tokens as they are generated, showing the multi-step process (e.g., “Running: transfer_task_to_finance_agent(...)”).
+
+- **Overall Goal & Benefit**  
+  - This structure allows multiple specialized “agents” (one for web searching/news, another for financial data) to collaborate under a single “team” agent.  
+  - The final output is an **integrated** summary for stock investors: up-to-date analyst recommendations, recent news headlines (with sources), and relevant financial tables.  
+  - By using `show_tool_calls=True`, the user can see how each sub-agent is invoked, providing transparency into the steps taken to gather and compile the information.
+
+
+------------------------------------------
+
+
+
+
+![Prompt Usage Example: Summarize analyst recommendations and share the lates NVDA news]
 (![alt text](image.png))
 
