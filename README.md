@@ -440,5 +440,84 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 
 ![Prompt Usage Example: Summarize analyst recommendations and share the lates NVDA news]
+
+![alt text](image-2.png)
+
+
 (![alt text](image.png))
 
+![alt text](image-1.png)
+
+Response output from the streamit run app.py(from within the poetry environment):
+
+App Interface Streamlit is running in the localhost :
+
+![alt text](image-3.png)
+
+Stock choosen: AAPL
+
+┏━ Message ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                        ┃
+┃ Tell me about the latest news and its competitors price history of this stock and compare the analyst recommendation for  the stock    ┃
+┃ and it's competitors.                                                                                                                  ┃
+┃                                                                                                                                        ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┏━ Response (211.0s) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                        ┃
+┃ Running:                                                                                                                               ┃
+┃                                                                                                                                        ┃
+┃  • transfer_task_to_web_agent(task_description=Provide the latest news for the stock, expected_output=A list of the latest news for    ┃
+┃    the stock, additional_information=Use duckduckgo_news to get the latest news for the stock)                                         ┃
+┃  • transfer_task_to_finance_agent(task_description=Get the current stock price and the price history of the stock and its competitors, ┃
+┃    expected_output=A table comparing the current stock price and the price history of the stock and its competitors,                   ┃
+┃    additional_information=...)                                                                                                         ┃
+┃  • transfer_task_to_finance_agent(task_description=Get the analyst recommendations for the stock and its competitors,                  ┃
+┃    expected_output=A table comparing the analyst recommendations for the stock and its competitors, additional_information=Use         ┃
+┃    get_analyst_recommendations to get the analyst recommendations for the stock and its competitors)                                   ┃
+┃                                                                                                                                        ┃
+┃ Here is the latest news for the stock:                                                                                                 ┃
+┃                                                                                                                                        ┃
+┃  • Stock Market Today: Dow set to fall but Nasdaq to rise after tech index's biggest dive of the year; Nvidia to bounce; Fed meeting   ┃
+┃    to begin. - MarketWatch                                                                                                             ┃
+┃  • Nvidia's plunge a 'difficult lesson' for investors betting on single-stock ETFs - MSN                                               ┃
+┃  • DeepSeek Panic Live Updates: Trump Calls AI Development 'Positive' Despite Tech Stock Plunge - Forbes on MSN.com                    ┃
+┃  • Stock Market Today: Nasdaq, S&P 500 down sharply as DeepSeek fears spark $1.1 trillion tech rout, Nvidia drops 14%; Dow turns       ┃
+┃    positive - MarketWatch                                                                                                              ┃
+┃  • The AI-stock wipeout lays bare 2 risks investors have been happy to ignore - until now - Markets Insider on MSN.com                 ┃
+┃                                                                                                                                        ┃
+┃ These news articles provide updates on the current stock market situation, including the impact of DeepSeek on the tech industry and   ┃
+┃ the performance of major stocks like Nvidia. They offer insights into the potential risks and opportunities in the market and how      ┃
+┃ investors are responding to the latest developments.                                                                                   ┃
+┃                                                                                                                                        ┃
+┃ Here is the table comparing the current stock price and the price history of the stock and its competitors:                            ┃
+┃                                                                                                                                        ┃
+┃                                                                                                                                        ┃
+┃   Company                                                Current Stock Price   Price History                                           ┃
+┃  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ┃
+┃   AAPL                                                   $229.86               {"1735534800000":{"Open":252.2299957275,"High":253.5…   ┃
+┃                                                                                Splits":0.0}}                                           ┃
+┃   GOOG                                                   $193.77               {"1735534800000":{"Open":190.8650054932,"High":193.7…   ┃
+┃                                                                                Splits":0.0}}                                           ┃
+┃   MSFT                                                   $434.56               {"1735534800000":{"Open":426.0599975586,"High":427.5…   ┃
+┃                                                                                Splits":0.0}}                                           ┃
+┃   Note: The current stock prices are based on the                                                                                      ┃
+┃   latest available data and may not reflect the                                                                                        ┃
+┃   current market price. The price history is a sample                                                                                  ┃
+┃   of the historical data and may not reflect the                                                                                       ┃
+┃   entire history of the stock.                                                                                                         ┃
+┃                                                                                                                                        ┃
+┃                                                                                                                                        ┃
+┃ Here is the table comparing the analyst recommendations for the stock and its competitors:                                             ┃
+┃                                                                                                                                        ┃
+┃                                                                                                                                        ┃
+┃   Company                                                                               Strong Buy   Buy   Hold   Sell   Strong Sell   ┃
+┃  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ┃
+┃   AAPL                                                                                  8            23    11     2      2             ┃
+┃   GOOG                                                                                  14           35    12     0      0             ┃
+┃   MSFT                                                                                  14           39    5      0      0             ┃
+┃   Note: The analyst recommendations are based on the latest available data and may                                                     ┃
+┃   not reflect the current market sentiments. The numbers represent the number of                                                       ┃
+┃   analysts with each recommendation.                                                                                                   ┃
+┃                                                                                                                                        ┃
+┃                                                                                                                                        ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
